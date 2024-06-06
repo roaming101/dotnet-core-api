@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: autodeployEaristil
-  namespace: namespace-workflow-1717630297201
+  name: autodeploy-earistil
+  namespace: namespace-workflow-1717632069763
   labels:
     kubernetes.azure.com/generator: devhub
 spec:
   type: LoadBalancer
   selector:
-    app: autodeployEaristil
+    app: autodeploy-earistil
   ports:
     - protocol: TCP
       port: 5000
