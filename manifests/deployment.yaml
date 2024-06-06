@@ -1,24 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: autodeployEaristil
+  name: autodeploy-earistil
   labels:
-    app: autodeployEaristil
+    app: autodeploy-earistil
     kubernetes.azure.com/generator: devhub
-  namespace: namespace-workflow-1717630297201
+  namespace: namespace-workflow-1717632069763
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: autodeployEaristil
+      app: autodeploy-earistil
   template:
     metadata:
       labels:
-        app: autodeployEaristil
+        app: autodeploy-earistil
     spec:
       containers:
-        - name: autodeployEaristil
-          image: acrworkflow1717630297201.azurecr.io/image-workflow-1717630297201:latest
+        - name: autodeploy-earistil
+          image: acrworkflow1717630297201.azurecr.io/image-workflow-1717632069763:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 5000
